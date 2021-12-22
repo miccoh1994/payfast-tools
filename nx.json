@@ -1,5 +1,5 @@
 {
-  "npmScope": "react-payfast",
+  "npmScope": "@miccoh",
   "affected": {
     "defaultBase": "main"
   },
@@ -17,7 +17,12 @@
     "default": {
       "runner": "@nrwl/workspace/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test", "e2e"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "test",
+          "e2e"
+        ]
       }
     }
   },
@@ -45,5 +50,5 @@
       }
     }
   },
-  "defaultProject": "test"
+  "defaultProject": "react-payfast"
 }
