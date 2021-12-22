@@ -8,7 +8,6 @@
     "test": "nx test",
     "publish": "cd dist/libs/react-payfast && pnpm publish"
   },
-  "private": true,
   "dependencies": {
     "core-js": "^3.6.5",
     "crypto-js": "^4.1.1",
