@@ -1,0 +1,62 @@
+{
+  "root": "apps/express-e2e",
+  "sourceRoot": "apps/express-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/node:build",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "dist/apps/express-e2e",
+        "main": "apps/express-e2e/src/main.ts",
+        "tsConfig": "apps/express-e2e/tsconfig.app.json",
+        "assets": [
+          "apps/express-e2e/src/assets"
+        ]
+      },
+      "configurations": {
+        "production": {
+          "optimization": true,
+          "extractLicenses": true,
+          "inspect": false,
+          "fileReplacements": [
+            {
+              "replace": "apps/express-e2e/src/environments/environment.ts",
+              "with": "apps/express-e2e/src/environments/environment.prod.ts"
+            }
+          ]
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/node:execute",
+      "options": {
+        "buildTarget": "express-e2e:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "apps/express-e2e/**/*.ts"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "parallel": false,
+        "commands": [
+          "ngrok http 3333",
+          "nx run express-e2e:serve"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

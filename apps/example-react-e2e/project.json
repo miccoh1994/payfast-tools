@@ -1,0 +1,28 @@
+{
+  "root": "apps/example-react-e2e",
+  "sourceRoot": "apps/example-react-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/example-react-e2e/cypress.json",
+        "devServerTarget": "example-react:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "example-react:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/example-react-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["example-react"]
+}

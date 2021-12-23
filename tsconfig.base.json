@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "react-payfast": ["libs/react-payfast/src/index.ts"]
+      "@za-payments/payfast": ["libs/payfast/src/index.ts"],
+      "@za-payments/payfast/*": ["libs/payfast/src/*"],
+      "@za-payments/react-payfast": ["libs/react-payfast/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

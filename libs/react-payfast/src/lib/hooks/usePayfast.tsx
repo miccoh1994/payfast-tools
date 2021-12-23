@@ -5,7 +5,7 @@ import {
   useState,
 } from 'react';
 import { ReactPayfastProps } from '../types';
-import { generateSignature } from '../util/hash';
+import { generateSignature } from '@za-payments/payfast/lib/generate-signature';
 type FieldValue = string | number | readonly string[] | undefined;
 export function usePayfast({
   merchant,
@@ -21,13 +21,15 @@ export function usePayfast({
     ...options,
   };
   useEffect(() => {
-    const sig = generateSignature({
-      ...merchant,
-      ...customer,
-      ...transaction,
-      ...options,
-    });
-    setSignature(sig);
+    if (merchant.passphrase) {
+      const sig = generateSignature({
+        ...merchant,
+        ...customer,
+        ...transaction,
+        ...options,
+      });
+      setSignature(sig);
+    }
   }, []);
   const fields: DetailedHTMLProps<
     InputHTMLAttributes<HTMLInputElement>,
@@ -41,13 +43,6 @@ export function usePayfast({
   });
   return {
     signature,
-    fields: [
-      ...fields,
-      {
-        type: 'hidden',
-        name: 'signature',
-        value: signature,
-      },
-    ],
+    fields: [...fields],
   };
 }

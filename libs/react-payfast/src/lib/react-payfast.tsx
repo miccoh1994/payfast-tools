@@ -7,7 +7,8 @@ export const ReactPayfast: React.FC<ReactPayfastProps> = ({
   children,
   ...props
 }) => {
-  const { fields } = usePayfast(props);
+  const { fields, signature } = usePayfast(props);
+  console.log(signature);
   const action_url = sandbox
     ? 'https://sandbox.payfast.co.za​/eng/process'
     : 'https://www.payfast.co.za/eng/process';
