@@ -3,20 +3,20 @@ orbs:
   nx: nrwl/nx@1.1.2
 jobs:
   main:
-    docker: 
+    docker:
       - image: node:16-alpine
     steps:
       - checkout
-      - run: npm install
+      - run: npm install --force
       - nx/set-shas
       - run: npx nx affected --base=$NX_BASE --target=build --parallel --max-parallel=3
       - run: npx nx affected --base=$NX_BASE --target=test --parallel --max-parallel=2
   pr:
-    docker: 
-      - image: node:16-alpine    
+    docker:
+      - image: node:16-alpine
     steps:
       - checkout
-      - run: npm install
+      - run: npm install --force
       - nx/set-shas
       - run: npx nx affected --base=$NX_BASE --target=build --parallel --max-parallel=3
       - run: npx nx affected --base=$NX_BASE --target=test --parallel --max-parallel=2
