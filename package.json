@@ -8,7 +8,7 @@
     "test": "nx test",
     "test-e2e": "nx run example-react-e2e:e2e",
     "dev": "nx run-many --target=serve --all",
-    "publish": "cd dist/libs/react-payfast && pnpm publish",
+    "publish-all": "cd dist/libs/react-payfast && pnpm publish && cd dist/libs/payfast && pnpm publish",
     "ngrok": "node ./ngrok.js"
   },
   "dependencies": {
