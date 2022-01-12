@@ -1,15 +1,5 @@
 import { MD5 } from 'crypto-js';
-import {
-  CustomerDetails,
-  MerchantDetails,
-  TransactionDetails,
-  TransactionOptions,
-} from '@za-payments/react-payfast';
-
-export type ISignatureInput = MerchantDetails &
-  CustomerDetails &
-  TransactionDetails &
-  TransactionOptions;
+import { ISignatureInput } from './types';
 
 export function generateSignature(
   data: ISignatureInput,

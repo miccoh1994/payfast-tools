@@ -1,4 +1,4 @@
-import { ISignatureInput } from '@za-payments/react-payfast';
+import { ISignatureInput } from './types';
 import axios from 'axios';
 import { getParameterString } from '..';
 

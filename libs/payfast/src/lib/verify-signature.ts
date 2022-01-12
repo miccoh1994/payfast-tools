@@ -1,4 +1,4 @@
-import { ISignatureInput } from '@za-payments/react-payfast';
+import { ISignatureInput } from './types';
 import { generateSignature } from '..';
 export function verifySignature(
   inputSignature: string,

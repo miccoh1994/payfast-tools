@@ -1,6 +1,6 @@
 import { usePayfast } from './hooks/usePayfast';
 import './react-payfast.module.scss';
-import { ReactPayfastProps } from './types';
+import { ReactPayfastProps } from '@za-payments/payfast';
 
 export const ReactPayfast: React.FC<ReactPayfastProps> = ({
   sandbox,

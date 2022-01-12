@@ -4,8 +4,8 @@ import {
   useEffect,
   useState,
 } from 'react';
-import { ReactPayfastProps } from '../types';
-import { generateSignature } from '@za-payments/payfast/lib/generate-signature';
+import { ReactPayfastProps } from '@za-payments/payfast';
+import { generateSignature } from '@za-payments/payfast';
 type FieldValue = string | number | readonly string[] | undefined;
 export function usePayfast({
   merchant,

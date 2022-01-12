@@ -1,4 +1,4 @@
-import { ISignatureInput } from '@za-payments/react-payfast';
+import { ISignatureInput } from './types';
 import { generateSignature } from './generate-signature';
 const payload = {
   m_payment_id: 'CbfulVs30aHEVF64HWwyQ',
