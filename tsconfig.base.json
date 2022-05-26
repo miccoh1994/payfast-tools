@@ -15,9 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@za-payments/payfast": ["libs/payfast/src/index.ts"],
-      "@za-payments/payfast/*": ["libs/payfast/src/*"],
-      "@za-payments/react-payfast": ["libs/react-payfast/src/index.ts"]
+      "@miccoh/payfast-core": ["packages/core/lib/index.ts"],
+      "@miccoh/payfast-server": ["packages/server/src/index.ts"],
+      "@miccoh/payfast-react": ["packages/react/lib/index.tsx"]
     }
   },
   "exclude": ["node_modules", "tmp"]

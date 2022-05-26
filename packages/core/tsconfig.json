@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "dist",
+    "lib": ["ESNext"],
+    "declaration": true
+  },
+    "exclude": [
+      "**/*.spec.ts",
+      "**/*.test.ts",
+      "**/*.spec.tsx",
+      "**/*.test.tsx",
+      "**/*.spec.js",
+      "**/*.test.js",
+      "**/*.spec.jsx",
+      "**/*.test.jsx"
+    ],
+    "include": ["**/*.ts", "**/*.tsx", "../payfast/src/lib/verify-origin.ts", "../payfast/src/lib/verify-origin.ts"]
+  }
+  

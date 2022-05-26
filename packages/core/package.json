@@ -1,0 +1,25 @@
+{
+    "name": "@miccoh/payfast-core",
+    "private": false,
+    "version": "0.0.3",
+    "author": {
+        "name": "Michael Alan Cohen",
+        "email": "miccoh1994@gmail.com"
+      },
+      "license": "MIT",
+      "repository": {
+        "type": "git",
+        "url": "https://github.com/miccoh1994/payfast-tools.git",
+        "directory": "packages/core"
+      },
+    "scripts": {
+        "build": "tsc -b"
+    },
+    "dependencies": {
+        "crypto-js": "^4.1.1"
+    },
+    "devDependencies": {
+        "@types/crypto-js": "^4.1.1",
+        "typescript": "^4.6.3"
+    }
+}

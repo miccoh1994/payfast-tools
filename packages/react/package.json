@@ -1,0 +1,69 @@
+{
+  "name": "@miccoh/payfast-react",
+  "private": false,
+  "version": "0.0.4",
+  "types": "dist/index.d.ts",
+  "module": "dist/payfast-react.es.js",
+  "main": "dist/payfast-react-umd.js",
+  "author": {
+    "name": "Michael Alan Cohen",
+    "email": "miccoh1994@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miccoh1994/payfast-tools.git",
+    "directory": "packages/react"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "coverage": "vitest run --coverage",
+    "test": "vitest",
+    "test:ui": "vitest --ui",
+    "lint": "eslint lib --ext ts,tsx",
+    "lint:fix": "yarn lint --fix",
+    "type-check": "tsc --project tsconfig.json --pretty --noEmit",
+    "ci": "yarn lint && yarn type-check && yarn vitest run"
+  },
+  "dependencies": {
+    "@miccoh/payfast-core": "^0.0.3"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "devDependencies": {
+    "@reach/router": "^1.3.4",
+    "@types/node": "^17.0.35",
+    "@types/reach__router": "^1.3.10",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/react-test-renderer": "^18.0.0",
+    "@vitejs/plugin-react": "^1.3.0",
+    "@vitest/ui": "^0.12.9",
+    "axios": "^0.27.2",
+    "c8": "^7.11.3",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "eslint-config-standard": "^17.0.0",
+    "eslint-config-standard-jsx": "^11.0.0",
+    "eslint-config-standard-react": "^11.0.1",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-n": "^15.2.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-react": "^7.30.0",
+    "nanoid": "^3.3.4",
+    "prettier": "^2.6.2",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-test-renderer": "^18.1.0",
+    "typescript": "^4.6.3",
+    "vite": "^2.9.9",
+    "vite-plugin-dts": "^1.2.0",
+    "vite-plugin-linter": "^1.2.0",
+    "vite-tsconfig-paths": "^3.4.1",
+    "vitest": "^0.12.9"
+  }
+}

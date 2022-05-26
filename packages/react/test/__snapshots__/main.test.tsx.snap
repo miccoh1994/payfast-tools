@@ -1,0 +1,94 @@
+// Vitest Snapshot v1
+
+exports[`MyEpicLibraryComponent renders succesfully 1`] = `
+<form
+  action="https://www.payfast.co.za/eng/process"
+  method="post"
+  name="react-payfast"
+>
+  <input
+    data-testid="merchant_id"
+    name="merchant_id"
+    role="none"
+    type="hidden"
+    value="10000100"
+  />
+  <input
+    data-testid="merchant_key"
+    name="merchant_key"
+    role="none"
+    type="hidden"
+    value="46f0cd694581a"
+  />
+  <input
+    data-testid="return_url"
+    name="return_url"
+    role="none"
+    type="hidden"
+    value="/success"
+  />
+  <input
+    data-testid="cancel_url"
+    name="cancel_url"
+    role="none"
+    type="hidden"
+    value="/success"
+  />
+  <input
+    data-testid="notify_url"
+    name="notify_url"
+    role="none"
+    type="hidden"
+    value="url"
+  />
+  <input
+    data-testid="name_first"
+    name="name_first"
+    role="none"
+    type="hidden"
+    value="Test"
+  />
+  <input
+    data-testid="name_last"
+    name="name_last"
+    role="none"
+    type="hidden"
+    value="Test"
+  />
+  <input
+    data-testid="email_address"
+    name="email_address"
+    role="none"
+    type="hidden"
+    value="test@test.com"
+  />
+  <input
+    data-testid="m_payment_id"
+    name="m_payment_id"
+    role="none"
+    type="hidden"
+    value="uJ-su7sNIpXN3Q_0v1Z8w"
+  />
+  <input
+    data-testid="amount"
+    name="amount"
+    role="none"
+    type="hidden"
+    value={100}
+  />
+  <input
+    data-testid="item_name"
+    name="item_name"
+    role="none"
+    type="hidden"
+    value="cookies"
+  />
+  <input
+    data-testid="item_description"
+    name="item_description"
+    role="none"
+    type="hidden"
+    value="a bag of cookies"
+  />
+</form>
+`;

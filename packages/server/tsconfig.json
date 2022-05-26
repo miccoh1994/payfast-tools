@@ -1,0 +1,14 @@
+{
+  // "files": [],
+  "compilerOptions": {
+    "outDir": "./dist",
+    "declaration": true,
+    "paths": {
+      "@miccoh/payfast-core": ["../../packages/core/lib/index.ts"],
+      "@miccoh/payfast-react": ["../../packages/react/lib/index.tsx"]
+    }
+  },
+  "include": ["./src/index.ts"],
+  "exclude": ["**/*.spec.ts"],
+  
+}
