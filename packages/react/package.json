@@ -1,7 +1,7 @@
 {
   "name": "@miccoh/payfast-react",
   "private": false,
-  "version": "0.0.4",
+  "version": "0.0.6",
   "types": "dist/index.d.ts",
   "module": "dist/payfast-react.es.js",
   "main": "dist/payfast-react-umd.js",
@@ -28,7 +28,7 @@
     "ci": "yarn lint && yarn type-check && yarn vitest run"
   },
   "dependencies": {
-    "@miccoh/payfast-core": "^0.0.3"
+    "@miccoh/payfast-core": "^0.0.6"
   },
   "peerDependencies": {
     "react": "^18.0.0",

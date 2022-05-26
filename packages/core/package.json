@@ -1,7 +1,7 @@
 {
     "name": "@miccoh/payfast-core",
     "private": false,
-    "version": "0.0.3",
+    "version": "0.0.6",
     "author": {
         "name": "Michael Alan Cohen",
         "email": "miccoh1994@gmail.com"

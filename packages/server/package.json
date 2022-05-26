@@ -1,6 +1,6 @@
 {
   "name": "@miccoh/payfast-server",
-  "version": "0.0.3",
+  "version": "0.0.6",
   "private": false,
   "main": "./dist/server/index.js",
   "author": {
@@ -14,7 +14,7 @@
     "directory": "packages/server"
   },
   "dependencies": {
-    "@miccoh/payfast-core": "^0.0.3",
+    "@miccoh/payfast-core": "^0.0.4",
     "axios": "^0.27.2",
     "crypto-js": "^4.1.1"
   },
