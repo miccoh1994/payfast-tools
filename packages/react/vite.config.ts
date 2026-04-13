@@ -5,7 +5,7 @@ import tsConfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
 console.log(resolve('lib', 'index.tsx'))
 // https://vitejs.dev/config/
-export default defineConfig(configEnv => ({
+export default defineConfig(({
   server: {
     proxy: {
       '/api': {

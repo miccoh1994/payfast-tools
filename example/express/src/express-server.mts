@@ -1,14 +1,19 @@
 /**
- * This is not a production server yet!
+ * NGrok is used to create a publically accessible URL for the local Express server, which is necessary for PayFast to send IPN requests to the server during development and testing.
+ * 
+ * This server listens for POST requests at the /ipn endpoint, validates incoming payment notifications using the validatePayment function from the @miccoh/payfast-server package, and responds accordingly.
+ * 
+ * Note: This is not a production server yet!
  * This is only a minimal backend to get started.
  */
 
 import express from 'express';
+
 import {connect} from 'ngrok';
 import { validatePayment } from '@miccoh/payfast-server';
 import { config } from 'dotenv';
 import { resolve } from 'path';
-console.log(resolve('.env'))
+
 config({
   path: resolve('.env')
 })
@@ -22,7 +27,7 @@ app.use(
 );
 app.post('/ipn', async (req, res) => {
   const valid = await validatePayment({
-    xForwardedForHeader: req.headers['x-forwarded-for'] || req.socket.remoteAddress,
+    xForwardedForHeader: req.headers['x-forwarded-for']?.[0] || req.socket.remoteAddress,
     payload: req.body,
     signature: req.body.signature
   }, {
@@ -42,7 +47,7 @@ const port = process.env.port || 3333;
 async function start() {
   const url = await connect({ addr: Number(port), authtoken: process.env.NGROK_AUTH_TOKEN, host_header: 'rewrite' });
   const server = app.listen(port, () => {
-    app.get('/tunnels', (req, res) => {
+    app.get('/tunnels', (_req, res) => {
       res.send(url);
     })
     
