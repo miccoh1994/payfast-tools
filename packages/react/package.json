@@ -28,7 +28,7 @@
     "ci": "yarn lint && yarn type-check && yarn vitest run"
   },
   "dependencies": {
-    "@miccoh/payfast-core": "^0.0.6"
+    "@miccoh/payfast-core": "workspace:*"
   },
   "peerDependencies": {
     "react": "^18.0.0",

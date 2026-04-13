@@ -14,7 +14,7 @@
     "directory": "packages/server"
   },
   "dependencies": {
-    "@miccoh/payfast-core": "^0.0.4",
+    "@miccoh/payfast-core": "workspace:*",
     "axios": "^0.27.2",
     "crypto-js": "^4.1.1"
   },

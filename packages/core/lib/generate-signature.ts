@@ -28,12 +28,3 @@ export function getParameterString(data: ISignatureInput, passphrase?: string) {
   }
   return parameterString;
 }
-
-export function getParameterStringWithSignature(
-  data: ISignatureInput,
-  passphrase?: string
-) {
-  const paramString = getParameterString(data, passphrase);
-  const signature = generateSignature(data, passphrase);
-  return paramString + '&signature=' + signature;
-}
