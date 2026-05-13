@@ -1,11 +1,11 @@
-import { ReactPayfastProps, usePayfast } from './use-payfast'
+import { ReactPayfastProps, usePayfastFields } from './use-payfast'
 
 export const ReactPayfast = ({
   sandbox,
   children,
   ...props
 }: ReactPayfastProps) => {
-  const { fields } = usePayfast(props);
+  const fields = usePayfastFields(props);
   const actionUrl = sandbox
     ? 'https://sandbox.payfast.co.za/eng/process'
     : 'https://www.payfast.co.za/eng/process';

@@ -11,7 +11,7 @@
     ],
     "rules": {
       "comma-dangle": [
-        "error",
+        "off",
         {
           "arrays": "always-multiline",
           "objects": "always-multiline",

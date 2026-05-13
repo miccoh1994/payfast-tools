@@ -3,8 +3,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import tsConfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
-console.log(resolve('lib', 'index.tsx'))
-// https://vitejs.dev/config/
+
 export default defineConfig(({
   server: {
     proxy: {
@@ -24,8 +23,7 @@ export default defineConfig(({
         filePath: filePath.replace('react/lib', ''),
         content,
       }),
-    }),
-    
+    })
   ],
   build: {
     lib: {
