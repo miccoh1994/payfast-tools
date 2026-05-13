@@ -1,9 +1,19 @@
 {
+  "globalDependencies": [".env"],
   "tasks": {
     "dev": {
       "dependsOn": [
         "^build"
-      ]
+      ],
+      "env": [
+        "NGROK_AUTHTOKEN", 
+        "PAYFAST_PASSPHRASE", 
+        "PAYFAST_MERCHANT_ID",
+        "PAYFAST_MERCHANT_KEY",
+        "NODE_ENV"
+      ],
+      "cache": false,
+      "persistent": true
     },
     "build": {
       "cache": false,
@@ -12,6 +22,12 @@
       ],
       "outputs": [
         "dist/**"
+      ],
+      "inputs": [
+        "lib/**",
+        "src/**",
+        "tsconfig.json",
+        "tsconfig.base.json"
       ]
     },
     "start": {},

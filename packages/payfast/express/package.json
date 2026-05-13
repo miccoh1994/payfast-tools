@@ -1,0 +1,78 @@
+{
+  "name": "@knix/payfast-express",
+  "version": "0.0.6",
+  "private": false,
+  "exports": {
+    ".": {
+      "default": {
+        "import": "./dist/express.mjs",
+        "require": null,
+        "types": "./dist/express.d.mts"
+      },
+      "node": {
+        "import": "./dist/node/express.mjs",
+        "require": "./dist/node/express.cjs",
+        "types": "./dist/node/express.d.ts"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "author": {
+    "name": "Michael Alan Cohen",
+    "email": "miccoh1994@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miccoh1994/payfast-tools.git",
+    "directory": "packages/express"
+  },
+  "dependencies": {
+    "@knix/payfast": "workspace:*",
+    "@knix/payfast-validation": "workspace:*"
+  },
+  "peerDependencies": {
+    "express": "^5.2.1"
+  },
+  "optionalDependencies": {
+    "@ngrok/ngrok": "catalog:"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "catalog:",
+    "esbuild": "^0.14.39",
+    "express": "catalog:",
+    "@ngrok/ngrok": "catalog:",
+    "tsdown": "catalog:",
+    "tslib": "^2.4.0",
+    "typescript": "catalog:"
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "default": {
+          "import": "./dist/express.mjs",
+          "require": null,
+          "types": "./dist/express.d.mts"
+        },
+        "node": {
+          "import": "./dist/node/express.mjs",
+          "require": "./dist/node/express.cjs",
+          "types": "./dist/node/express.d.ts"
+        }
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "types": "./dist/express.d.ts",
+  "main": "./dist/express.js",
+  "module": "./dist/express.mjs"
+}

@@ -12,13 +12,7 @@
     "module": "esnext",
     "lib": ["es2017", "dom"],
     "skipLibCheck": true,
-    "skipDefaultLibCheck": true,
-    "baseUrl": ".",
-    "paths": {
-      "@miccoh/payfast-core": ["packages/core/lib/index.ts"],
-      "@miccoh/payfast-server": ["packages/server/src/index.ts"],
-      "@miccoh/payfast-react": ["packages/react/lib/index.tsx"]
-    }
+    "skipDefaultLibCheck": true
   },
   "exclude": ["node_modules", "tmp"]
 }

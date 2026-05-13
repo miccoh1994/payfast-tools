@@ -3,17 +3,18 @@
     "version": "0.0.1",
     "type": "module",
     "scripts": {
-        "dev": "node ./src/express-server.mts"
+        "dev": "cross-env NODE_ENV=development node --watch ./src/express-server.mts"
     },
     "dependencies": {
-        "@miccoh/payfast-server": "workspace:*",
-        "@types/express": "^4.17.13",
-        "dotenv": "^16.0.1",
-        "express": "^4.18.1",
-        "ngrok": "^4.3.1"
+        "@knix/payfast-express": "workspace:*",
+        "@knix/payfast-validation": "workspace:*",
+        "@ngrok/ngrok": "catalog:",
+        "@types/express": "catalog:",
+        "express": "catalog:"
     },
     "devDependencies": {
-        "@types/node": "^17.0.35",
+        "@types/node": "catalog:",
+        "cross-env": "^10.1.0",
         "esbuild": "^0.14.39",
         "esbuild-register": "^3.3.2",
         "nodemon": "^2.0.16",
