@@ -1,0 +1,23 @@
+{
+    "name": "express-test-e2e",
+    "version": "0.0.1",
+    "type": "module",
+    "scripts": {
+        "dev": "cross-env NODE_ENV=development node --watch ./src/express-server.mts"
+    },
+    "dependencies": {
+        "@knix/payfast-express": "workspace:*",
+        "@knix/payfast-validation": "workspace:*",
+        "@ngrok/ngrok": "catalog:",
+        "@types/express": "catalog:",
+        "express": "catalog:"
+    },
+    "devDependencies": {
+        "@types/node": "catalog:",
+        "cross-env": "^10.1.0",
+        "esbuild": "^0.14.39",
+        "esbuild-register": "^3.3.2",
+        "nodemon": "^2.0.16",
+        "tslib": "^2.4.0"
+    }
+}

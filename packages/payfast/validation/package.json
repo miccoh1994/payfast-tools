@@ -1,0 +1,77 @@
+{
+  "name": "@knix/payfast-validation",
+  "version": "0.0.6",
+  "private": false,
+  "module": "./dist/index.mjs",
+  "imports": {
+    "#md5": {
+      "node": "./src/md5.node.ts",
+      "default": "./src/md5.ts"
+    }
+  },
+  "exports": {
+    ".": {
+      "node": {
+        "import": "./dist/index.js",
+        "require": "./dist/node/index.cjs",
+        "types": "./dist/node/index.d.ts"
+      },
+      "default": {
+        "import": "./dist/index.mjs",
+        "require": null,
+        "types": "./dist/index.d.ts"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "author": {
+    "name": "Michael Alan Cohen",
+    "email": "miccoh1994@gmail.com"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miccoh1994/payfast-tools.git",
+    "directory": "packages/server"
+  },
+  "dependencies": {
+    "@knix/payfast": "workspace:*",
+    "axios": "^0.27.2",
+    "crypto-js": "^4.1.1"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/express": "^4.17.13",
+    "@types/node": "catalog:",
+    "esbuild": "^0.14.39",
+    "tsdown": "catalog:",
+    "tslib": "^2.4.0",
+    "typescript": "catalog:",
+  },
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "node": {
+          "import": "./dist/index.js",
+          "require": "./dist/node/index.cjs",
+          "types": "./dist/node/index.d.ts"
+        },
+        "default": {
+          "import": "./dist/index.mjs",
+          "require": null,
+          "types": "./dist/index.d.ts"
+        }
+      },
+      "./package.json": "./package.json"
+    }
+  },
+  "engines": {
+    "node": ">=25.0.0"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts"
+}

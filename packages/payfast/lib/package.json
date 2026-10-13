@@ -1,0 +1,22 @@
+{
+    "name": "@knix/payfast",
+    "private": false,
+    "version": "1.0.0",
+    "type": "module",
+    "devDependencies": {
+        "tsdown": "catalog:",
+        "typescript": "catalog:",
+        "@types/node": "catalog:"
+    },
+    "types": "./index.d.cts",
+    "exports": {
+        ".": {
+            "default": {
+                "import": null,
+                "require": null,
+                "types": "./index.d.ts"
+            }
+        },
+        "./package.json": "./package.json"
+    }
+}

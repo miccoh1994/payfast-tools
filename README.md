@@ -1,10 +1,9 @@
-# Payfast Tools
+# Knix
 
-Basic libs to work with the [Payfast](https://payfast.co.za) Api.
+Libraries to work with the [Payfast](https://payfast.co.za) Api.
 
-End to end tested!
 
 Packages:
-- ```@miccoh/payfast-core``` basic utilities.
-- ```@miccoh/payfast-react``` react component for quick setup of payfast.
-- ```@miccoh/payfast-server``` server side utilities for validating payments.
+- ```@knix/payfast``` basic utilities.
+- ```@knix/payfast-react``` react component for quick setup of payfast.
+- ```@knix/payfast-validation``` server side utilities for validating payments.
