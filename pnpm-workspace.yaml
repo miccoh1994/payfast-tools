@@ -3,6 +3,9 @@ packages:
   - 'packages/**'
   - 'example/**'
 
+minimumReleaseAge: 1440
+blockExoticSubdeps: true
+
 catalog:
   '@types/node': ^25.0.0
   typescript: ^6.0.2
@@ -10,3 +13,5 @@ catalog:
   '@ngrok/ngrok': 1.7.0
   express: 5.2.1
   '@types/express': 5.0.6
+
+

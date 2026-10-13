@@ -51,10 +51,6 @@
     "tsdown": "catalog:",
     "tslib": "^2.4.0",
     "typescript": "catalog:",
-    "vite": "^2.9.9",
-    "vite-plugin-dts": "^1.2.0",
-    "vite-plugin-linter": "^1.2.0",
-    "vite-tsconfig-paths": "^3.4.1"
   },
   "publishConfig": {
     "exports": {
@@ -74,7 +70,7 @@
     }
   },
   "engines": {
-    "node": ">25.0.0"
+    "node": ">=25.0.0"
   },
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts"
